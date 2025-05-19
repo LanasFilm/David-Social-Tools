@@ -7,8 +7,11 @@ session = login.session
 # gets your following list
 res = requests.get(f"https://www.davidsocial.com/api/get-bootlicking?id={login.user}", cookies= session.cookies)
 
-# turns json list into python list
-following = json.loads(res.content)
+# check for errors
+res.raise_for_status()
+
+# load the response as a list
+following = res.json()
 # print(following)
 
 
