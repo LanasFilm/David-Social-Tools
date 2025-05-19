@@ -15,7 +15,7 @@ following = json.loads(res.content)
 # this loop actually does all the glomping
 for i in following:
     glomp = {
-        "message": "",
+        "message": "You have been glomped using DS Tools",
         "sender": login.user,
         "receiver": i
     }
