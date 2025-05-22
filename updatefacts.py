@@ -1,3 +1,5 @@
+"Updates user's facts section with custom facts"
+
 import requests
 import davidsocial_login as login
 import json

@@ -1,3 +1,4 @@
+"Logs in to the David Social API with given credentials"
 import requests
 
 try:

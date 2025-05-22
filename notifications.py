@@ -1,3 +1,5 @@
+"System to detect notifications; not completed right now"
+
 import requests
 import json
 import time # for testing purposes

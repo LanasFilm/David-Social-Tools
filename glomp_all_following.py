@@ -1,3 +1,5 @@
+"Glomps everyone in the user's following list"
+
 import requests
 import json
 import davidsocial_login as login

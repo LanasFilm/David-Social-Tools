@@ -1,3 +1,5 @@
+"Allows user to send glomps with custom messages"
+
 import requests
 import json
 import time
