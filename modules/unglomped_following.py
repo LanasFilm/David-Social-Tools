@@ -27,6 +27,7 @@ for i in following:
         "message":""}
 
     res = requests.post("https://www.davidsocial.com/api/already-glomped", json= check_glomp, cookies= session.cookies)
+    # adds to list if unglomped
     if res.json() == False:
         ls.append(i)
 
