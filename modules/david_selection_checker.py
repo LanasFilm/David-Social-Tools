@@ -1,5 +1,5 @@
-"Searches through a user's profile to match given string"
-"Case insensitive"
+"Checks a user's posts history, and returns posts which have been marked by David Intelligence"
+"Recycled and slightly modified code from search_user.py"
 
 import requests
 import json
@@ -21,24 +21,24 @@ if not ls:
     quit()
 
 
-find = input("Search for: ").lower()
 
-# finds text in posts that matches
+# finds if post has been selected
 matching_posts = []
 for i in range(len(ls)):
-    post = ls[i]["content"].lower()
+    post = ls[i]
     # print(post)
 
-    if find in post:
+    if post["david_selection"]:
         matching_posts.append(i)
 
 
 # puts post in chronological order
 matching_posts.reverse()
+    
 
 # print out of found posts
 if matching_posts:
-    print("\n\nMATCHING POSTS: \n")
+    print("\nDAVID SELECTED POSTS: \n")
     for i in matching_posts:
         print(ls[i]["content"])
 
@@ -48,4 +48,4 @@ if matching_posts:
         print(f"https://www.davidsocial.com/~/thread/{ls[i]["id"]}")
         print()
 else:
-    print("\nNO MATHCING POSTS WERE FOUND \n")
+    print("\nNO DAVID SELECTED POSTS FOUND \n")
