@@ -46,6 +46,6 @@ if matching_posts:
             print("***THERE IS AN ATTACHED IMAGE***")
 
         print(f"https://www.davidsocial.com/~/thread/{ls[i]["id"]}")
-        print()
+        print("-"*100)
 else:
     print("\nNO MATHCING POSTS WERE FOUND \n")
