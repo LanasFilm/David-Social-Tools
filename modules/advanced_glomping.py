@@ -7,34 +7,34 @@ import davidsocial_login as login
 
 session = login.session
 
-# # INITIAL GLOMPING TO CLEAR BACKLOG
+# INITIAL GLOMPING TO CLEAR BACKLOG
 
-# # gets your following list
-# res = requests.get(f"https://www.davidsocial.com/api/get-bootlicking?id={login.user}", cookies= session.cookies)
+# gets your following list
+res = requests.get(f"https://www.davidsocial.com/api/get-bootlicking?id={login.user}", cookies= session.cookies)
 
-# # # check for errors
-# res.raise_for_status()
+# # check for errors
+res.raise_for_status()
 
-# # load the response as a list
-# following = res.json()
-# # print(following)
+# load the response as a list
+following = res.json()
+# print(following)
 
-# num = 0
+num = 0
 
-# # this loop actually does all the glomping
-# for i in following:
-#     glomp = {
-#         "message": "glompity glomp glomp",
-#         "sender": login.user,
-#         "receiver": i
-#     }
+# this loop actually does all the glomping
+for i in following:
+    glomp = {
+        "message": "glompity glomp glomp",
+        "sender": login.user,
+        "receiver": i
+    }
 
-#     res = requests.post("https://www.davidsocial.com/api/glomp", json= glomp, cookies= session.cookies)
-#     num += 1
-#     print(f"{num:3d}/{len(following)} initial glomp {i}")
-#     # print(res)
+    res = requests.post("https://www.davidsocial.com/api/glomp", json= glomp, cookies= session.cookies)
+    num += 1
+    print(f"{num:3d}/{len(following)} initial glomp {i}")
+    # print(res)
 
-# print("finished initial glomping\n")
+print("finished initial glomping\n")
 
 
 
