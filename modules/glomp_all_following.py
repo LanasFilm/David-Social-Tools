@@ -21,7 +21,7 @@ num = 0
 # this loop actually does all the glomping
 for i in following:
     glomp = {
-        "message": "",
+        "message": "glompity glomp glomp",
         "sender": login.user,
         "receiver": i
     }
